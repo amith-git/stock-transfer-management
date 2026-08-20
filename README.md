@@ -1,7 +1,7 @@
 # Stock Transfer Management
 
 ![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
-![Tech Stack](https://img.shields.io/badge/Stack-Next.js_|_TypeScript_|_Prisma-black?style=for-the-badge)
+![Tech Stack](https://img.shields.io/badge/Stack-Next.js_|_TypeScript_|_Prisma_|_PostgreSQL-black?style=for-the-badge)
 
 ## Links
 - **Live Application URL:** [Will add after Vercel deployment]
