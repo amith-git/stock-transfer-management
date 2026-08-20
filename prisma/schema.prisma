@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Warehouse {
+  id               String          @id @default(cuid())
+  name             String          @unique
+  stock            Int             @default(0)
+  transfersOut     StockTransfer[] @relation("Source")
+  transfersIn      StockTransfer[] @relation("Destination")
+}
+
+model StockTransfer {
+  id               String   @id @default(cuid())
+  sourceId         String
+  destinationId    String
+  quantity         Int
+  status           String   @default("PENDING")
+  createdAt        DateTime @default(now())
+
+  source           Warehouse @relation("Source", fields: [sourceId], references: [id])
+  destination      Warehouse @relation("Destination", fields: [destinationId], references: [id])
+}

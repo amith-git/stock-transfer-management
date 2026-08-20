@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stock Transfer Management
 
-## Getting Started
+![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
+![Tech Stack](https://img.shields.io/badge/Stack-Next.js_|_TypeScript_|_Prisma-black?style=for-the-badge)
 
-First, run the development server:
+## Links
+- **Live Application URL:** [Will add after Vercel deployment]
+- **GitHub Repository:** [Will add after GitHub push]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- Next.js (App Router), TypeScript, Tailwind CSS
+- Prisma ORM & PostgreSQL (Neon)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Steps (Local)
+1. Clone the repository.
+2. Install dependencies: `npm install`
+3. Add your database connection string to a `.env` file: `DATABASE_URL="..."`
+4. Sync the database: `npx prisma db push`
+5. Run the server: `npm run dev`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Sample Usage / Test Flow
+1. **Create Warehouses:** Navigate to the main dashboard. Under "Create Warehouse & Stock", create two warehouses (e.g., Warehouse A with 100 stock, Warehouse B with 0 stock).
+2. **Initiate Transfer:** Under "Create Transfer Request", select Warehouse A as the source, Warehouse B as the destination, and input a quantity. Click "Request".
+3. **Complete Transfer:** In the "Transfer Status Management" table, locate your PENDING request. Click "Complete". 
+4. **Verification:** Observe that the current stock levels immediately update. Flash messages will confirm success or block invalid actions (like negative stock or duplicate names).
