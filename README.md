@@ -4,8 +4,8 @@
 ![Tech Stack](https://img.shields.io/badge/Stack-Next.js_|_TypeScript_|_Prisma_|_PostgreSQL-black?style=for-the-badge)
 
 ## Links
-- **Live Application URL:** [Will add after Vercel deployment]
-- **GitHub Repository:** [Will add after GitHub push]
+- **Live Application URL:** [https://stock-transfer-management-theta.vercel.app](https://stock-transfer-management-theta.vercel.app)
+- **GitHub Repository:** [https://github.com/amith-git/stock-transfer-management](https://github.com/amith-git/stock-transfer-management)
 
 ## Tech Stack
 - Next.js (App Router), TypeScript, Tailwind CSS
